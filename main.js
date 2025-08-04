@@ -1,8 +1,9 @@
 let score = 0;
-let currentMoleIndex = 0;
+let currentMoleIndex = null;
 
 const holes = document.querySelectorAll(".hole");
-const scoreText = document.querySelector(".num"); 
+const scoreText = document.querySelector(".num");
+const startBtn = document.querySelector(".startBtn");
 
 for (let i = 0; i < holes.length; i++) {
   const mole = document.createElement("div");
@@ -25,14 +26,20 @@ for (let i = 0; i < holes.length; i++) {
 
   holes[i].appendChild(mole);
 }
-
+ 
 function showRandomMole() {
   if (currentMoleIndex === null) {
-    const moleIndex = Math.floor(Math.random() * holes.length);
+    const moleIndex = Math.floor(Math.random() * 9);
+    currentMoleIndex = moleIndex;
     const moles = document.querySelectorAll(".mole");
     moles[moleIndex].style.display = "block";
-    currentMoleIndex = moleIndex;
   }
 }
 
-showRandomMole();
+startBtn.addEventListener("click", () => {
+  score = 0;
+  scoreText.textContent = score;
+  document.querySelectorAll(".mole");
+  currentMoleIndex = null;
+  showRandomMole();
+});

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Jomhuria&display=swap");
 body {
-  background-color: #afe57f;
+  background-color: #96c868;
   font-family: "Jomhuria", serif;
   font-size: 100px;
   color: #022d11;
@@ -25,6 +25,7 @@ body {
   width: 300px;
   background-color: #230d2d;
   border-radius: 100%;
+  position: relative;
 }
 .startBtn {
   background-color: #022d11;
@@ -63,10 +64,12 @@ body {
   cursor: pointer;
 }
 
-.mole{
-  background-image: url("./image/mole.png");
+.mole {
+  background-image: url("./image/ab7ba87f34c5d1d5d8505ed4b88c5e96b7741da1.png");
   background-size: cover;
-  height: 100px;
-  width: 100px;
-  border-radius: 50%;
+  height: 172px;
+  width: 165px;
+  position: absolute;
+  top: -70px;
+  left: 62px;
 }
